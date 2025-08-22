@@ -592,10 +592,14 @@ void simplify(expr_t *e) {
       expr_t *x = e->arg.x;
       simplify(x);
 
-      expr_t negation = Negation(x);
-      if (is_simplifiable(&negation)) simplify(&negation);
+      if (x->variant == EXPR_NEGATION) {
+        if (is_simplifiable(x->arg.x)) simplify(x->arg.x);
 
-      *e = negation;
+        *e = *x->arg.x;
+        break;
+      }
+
+      *e = Negation(x);
       break;
     }
 
