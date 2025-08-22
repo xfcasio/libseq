@@ -1,5 +1,5 @@
-#ifndef _LDS_PRIMITIVES_H
-#define _LDS_PRIMITIVES_H
+#ifndef _LIBSEQ_PRIMITIVES_H
+#define _LIBSEQ_PRIMITIVES_H
 
 #include <stdint.h>
 #include <sys/types.h>

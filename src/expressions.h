@@ -1,5 +1,5 @@
-#ifndef _LDS_EXPRESSIONS_H
-#define _LDS_EXPRESSIONS_H
+#ifndef _LIBSEQ_EXPRESSIONS_H
+#define _LIBSEQ_EXPRESSIONS_H
 
 #include <stdint.h>
 #include <stdbool.h>

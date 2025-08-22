@@ -1,12 +1,12 @@
-#ifndef _LDS_ALLOCATOR_H
-#define _LDS_ALLOCATOR_H
+#ifndef _LIBSEQ_ALLOCATOR_H
+#define _LIBSEQ_ALLOCATOR_H
 #include <stdlib.h>
 #include <stdio.h>
 #include "primitives.h"
 
-#define LDS_ENABLE_GPA_ALLOCATOR
+#define LIBSEQ_ENABLE_GPA_ALLOCATOR
 
-#ifdef LDS_ENABLE_GPA_ALLOCATOR
+#ifdef LIBSEQ_ENABLE_GPA_ALLOCATOR
   #define GPA_DEALLOC [[gnu::cleanup(gpa_gnu_cleanup)]]
   
   static usize __active_gpa_allocations = 0;
